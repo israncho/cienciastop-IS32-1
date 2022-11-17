@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Perfil } from './perfil';
+import { Usuario } from './usuario';
 import swal from 'sweetalert2';
 
 @Injectable({
@@ -13,7 +13,7 @@ export class PerfilService {
   
   constructor(private http: HttpClient) { }
   
-  public getPerfil(): Observable<Perfil[]> {
-    return this.http.get<Perfil[]>(this.urlEndPoint);
+  public getPerfil(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.urlEndPoint);
   }
 }

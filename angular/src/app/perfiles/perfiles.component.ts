@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Perfil } from './perfil';
+import { Usuario } from './usuarios';
 import { PerfilService } from './perfil.service';
 
 @Component({
@@ -8,15 +8,15 @@ import { PerfilService } from './perfil.service';
   styleUrls: ['./perfiles.component.css']
 })
 export class PerfilesComponent implements OnInit {
-  perfil: Perfil[];
+  perfil: Usuario[];
   
   constructor(private perfilService: PerfilService) {
      this.perfil = []
   }
 
   ngOnInit(): void {
-     this.perfilService.getPerfil().subscribe(
-        perfil => this.perfil = perfil
+     this.perfilService.getUsuario().subscribe(
+        perfiles => this.perfil = perfiles
      );
   }
 
