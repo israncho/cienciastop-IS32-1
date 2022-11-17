@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from './usuarios';
+import { Usuario } from './usuario';
 import { PerfilService } from './perfil.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class PerfilesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-     this.perfilService.getUsuario().subscribe(
+     this.perfilService.getPerfil().subscribe(
         perfiles => this.perfil = perfiles
      );
   }
